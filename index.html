@@ -39,8 +39,8 @@
           <ul class="side-nav">
             <li class="is-active"><span>Home</span></li>
             <li><span>Ar$enal</span></li>
-            <li><span>Playgr0und</span></li>
-            <li><span>ConQuer</span></li>
+            <li><span>Playground</span></li>
+            <li><span>Xploit CTF</span></li>
             <li><span>Join us</span></li>
           </ul>
         </nav>
@@ -188,10 +188,28 @@
               <div class="contact--lockup">
                 <div class="modal">
                   <div class="modal--information">
-                    <p>Pawia 5, 31-154 Kraków, Poland</p>
-                    <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-                    <a href="tel:+148126287560">+48 12 628 75 60</a>
+                    <p>Xploit CTF</p>
+                    <p>2023</p>
                   </div>
+                  <!--Countdown-->
+                        <p id="demo"></p>
+                        <script>
+                        var countDownDate = new Date("Oct 7, 2023 24:00:00").getTime();
+                        var x = setInterval(function() {
+                          var now = new Date().getTime();
+                          var distance = countDownDate - now;
+                          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                          document.getElementById("demo").innerHTML = days + "D: " + hours + "H: "  + minutes + "M: " + seconds + "S ";
+                          if (distance < 0) {
+                            clearInterval(x);
+                            document.getElementById("demo").innerHTML = "Let's Begin !";
+                          }
+                        }, 1000);
+                        </script>
+                        <!--Countdown-->
                   <ul class="modal--options">
                     <li><a href="#0">Bēhance</a></li>
                     <li><a href="#0">dribbble</a></li>
