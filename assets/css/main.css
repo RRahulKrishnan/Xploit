@@ -205,13 +205,19 @@ optgroup {
   font-weight: bold;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-}
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* Adjust the values for the desired glow effect */
+        }
+
+        
+        td, th, td {
+          border: 1px solid rgb(255, 255, 255);
+          text-align: left;
+          padding: 8px;
+          box-shadow: 0 0 19px rgba(255, 255, 255, 0.5);
+        }
 ::-moz-selection {
   background: #fff498;
 }
