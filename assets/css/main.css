@@ -1002,8 +1002,31 @@ body {
   }
 }
 .about--banner {
+  position: top;
+  height: 350px;
+}
+.about--moreoptions{
   position: relative;
-  height: 475px;
+  height: 160px;
+}
+.about--moreoptions a {
+  color:white; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  transition: text-shadow 0.3s; /* Add a smooth transition for the text-shadow */
+}
+
+/* Define the style for the link on hover with a glow effect */
+.about--moreoptions a:hover {
+  color:white; /* Keep the text color the same */
+  text-shadow: 0 0 10px white; /* Add a glowing text effect */
+}
+.about--moreoptions a svg{
+  position: relative;
+  left: 5px;
+  width: 15px;
+  fill: #fff;
+  -webkit-transition: left 0.2s ease-in-out;
+  transition: left 0.2s ease-in-out;
 }
 
 .about--banner h2 {
