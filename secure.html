@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xploit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Reduced Neon Blue Glow Effect */
+        h1, h2 {
+            color: #ffffff; /* Neon color */
+            text-shadow: 0 0 5px #ffffff, 0 0 1px #ffffff;
+        }
+        strong {
+            color: #b741db; /* Neon blue color */
+        }
+        i {
+            color: #41db68; /* Neon blue color */
+        }
+        a {
+            color: #41cedb; /* Neon blue color */
+        }
+        /* Style for Home link box */
+        .header--home-link {
+            background-color: #0f33ff; /* Background color for the box */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold;
+        }
+        
+        /* Optional: hover effect */
+        .header--home-link:hover {
+            background-color: #0921b8; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <p>Xploit</p>
+        </a>
+        <p class="device-notification--message">Xploit has so much to offer that we must request you orient your device
+            to portrait or find a larger screen. You won't be disappointed.</p>
+    </div>
+    <div class="l-wrapper">
+        <header class="header">
+            <a class="header--logo" href="https://rrahulkrishnan.github.io/Xploit/index.html">
+                <img src="assets/img/logo.png" alt="Global">
+                <p>Xploit</p>
+            </a>
+            <!-- Home link styled as a button -->
+            <a class="header--home-link" href="index.html">Home</a>
+        </header>  
+        <div>
+            <br><br><br>
+            <!-- Password Salting Challenge Write-Up -->
+            <div class="about--banner">
+            <center>
+              <h2>Secure Enough?<br>Password Decryption Challenge "Secure Enough?"</h2>
+            </center>
+            </div>
+            <h2>Introduction:</h2>
+            <p>Passwords are often the last line of defense when securing personal and confidential data. However, many users still rely on weak passwords, making their data vulnerable. In this challenge, you'll examine the use of password salting and learn how to enhance password security.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Scenario:</h2>
+            <p>A list of encrypted passwords has been found in a file named <strong>Pass.txt</strong>. To secure these passwords, the organization has implemented password encryption. Your task is to determine whether these passwords are secure enough by analyzing their strength after salting and converting them for further insights.</p>
+            <img src="assets/img/scree.png" alt="Global">
+            <br>
+            <hr>
+            <br>
+            <h2>Objective:</h2>
+            <ul>
+                <li><strong>Evaluate password security</strong>: Analyze the encrypted passwords in Pass.txt using password-cracking techniques and tools to determine if the passwords are strong enough.</li>
+                <li><strong>Convert and check the strength</strong>: Use CyberChef to convert the passwords and evaluate their strength using an online password checker tool.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>Skills Required:</h2>
+            <ul>
+                <li><strong>Password encrypting</strong>: Understand how password encrypting works to enhance password security in differen encryption algorithms.</li>
+                <li><strong>Password Strength Analysis</strong>: Use online tools like <a href="https://www.passwordmonster.com/" target="_blank">Password Monster</a> to analyze and check the strength of the converted passwords.</li>
+                <li><strong>Envryption Cracking</strong>: Familiarity with encryption cracking / decryption methods and conversion tools like <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a>.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>How to Play:</h2>
+            <ol>
+                <li><strong>Get the Password File</strong>: Download the Pass.txt file containing the encrypted passwords.</li>
+                <li><strong>Convert Using CyberChef</strong>: Use <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> to convert the encryted passcodes into readable format for analysis.</li>
+                <li><strong>Check Password Strength</strong>: Once converted, visit <a href="https://www.passwordmonster.com/" target="_blank">Password Monster</a> to check the strength of the passwords.</li>
+                <li><strong>Submit the Flag</strong>: The flag will be found in the strongest password after analysis.</li>
+                <li><strong>Flag Format</strong>: The flag will be in the following format "<i>flag{this_is_your_flag}</i> ".</li>
+            </ol>
+            <br>
+            <hr>
+            <br>
+            <h2>Hint:</h2>
+            <img src="assets/img/screech.png" alt="Global"><br>
+            <p>Let's better understand the process of passcode dececoding and how it is to be done:</p>
+            <p>On accessing <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> you will be greeted with this console, thhe console is divided into 4 parts namely:
+                <ol>
+                    <li>Operations</li>
+                    <li>Recipe</li>
+                    <li>Input</li>
+                    <li>Output</li>
+                </ol>
+            </p>
+            <img src="assets/img/console.png" alt="Global" width="900"><br>
+            <p>Here the <i>Operations</i>  tab has a variety of both encryptions and decryption algorithms that can be used to encode or decode the data, you can use this by simply dragiing and dropping the required algorithm into the <i>Recipe</i> section.</p>
+            <img src="assets/img/opt.png" alt="Global"><br>
+            <p>Once you have added the algorithms in the <i>Recipe</i> section you can now enter the <strong>"password"</strong> in the <i>Input</i> section and click on <strong>"Bake"</strong>.</p>
+            <img src="assets/img/reci.png" alt="Global"><br>
+            <p>Now that you have the decrypted message, you can check its effictiveness and strendth using the <a href="https://www.passwordmonster.com/" target="_blank">Password Monster</a> tool.</p>
+            <img src="assets/img/pass.png" alt="Global" width="900"><br>
+            <br>
+            <hr>
+            <br>
+            <h2>Red Flags to Watch Out For:</h2>
+            <ul>
+                <li><strong>Weak Passwords</strong>: Passwords containing simple patterns like "123456" or "password123" are especially vulnerable.</li>
+                <li><strong>Improper Decryption</strong>: If password decrption is improperly implemented on <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a>, even encrypted passwords can be cracked with ease.</li>
+                <li><strong>Password Cracking</strong>: Be aware of common tools like <a href="https://www.passwordmonster.com/" target="_blank">Password Monster</a>, which can be used to identify the effectiveness of the password.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>Conclusion:</h2>
+            <p>This challenge aims to deepen your understanding of password security through salting and password strength analysis. By securing your passwords with proper salting techniques, you can significantly reduce the risk of compromise.</p>
+            <br>
+            <br>
+            <center><h2><u>Good luck and happy flag hunting!</u> 🎯</h2></center>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
