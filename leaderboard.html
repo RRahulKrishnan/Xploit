@@ -10,7 +10,7 @@
     <meta name="keywords" content="global, template, html, sass, jquery">
     <meta name="author" content="Bucky Maler">
     <link rel="stylesheet" href="assets/css/main.css">
-    <style>
+   <style>
         table {
           font-family: arial, sans-serif;
           border-collapse: collapse;
@@ -18,57 +18,54 @@
           box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
         }
 
-        strong{
-          color: #0f33ff;
+        strong {
+          color: #41cedb;
         }
-        
-        td, th, td {
+
+        td, th {
           border: 1px solid rgb(255, 255, 255);
           text-align: left;
           padding: 8px;
           box-shadow: 0 0 19px rgba(255, 255, 255, 0.5);
         }
-        
+
+        /* Sticky header */
+        th {
+          position: sticky;
+          top: 0; /* Sticks to the top */
+          background-color: white; /* White background */
+          color: black; /* Black text color for the header */
+          z-index: 1; /* Ensures the header appears on top of other rows */
+        }
+
         tr:nth-child(even) {
           background-color: black;
         }
+
         tr:hover {
-            background-color: white;
-            color: black;
+          background-color: white;
+          color: black;
         }
-        body{
-            background-repeat: no-repeat;
-            background-position: 68pc;
-            background-size: 160mm;
+
+        body {
+          background-repeat: no-repeat;
+          background-position: 68pc;
+          background-size: 160mm;
         }
+
         /* Style for Home link box */
         .header--home-link {
-            background-color: #0f33ff; /* Background color for the box */
-            color: #fff; /* Text color */
-            padding: 10px 20px; /* Padding around the text */
-            border-radius: 5px; /* Rounded corners */
-            text-decoration: none; /* Remove underline */
-            font-weight: bold;
+          background-color: #0f33ff; /* Blue background color */
+          color: #fff; /* White text color */
+          padding: 1px 20px; /* Padding around the text */
+          border-radius: 5px; /* Rounded corners */
+          text-decoration: none; /* Remove underline */
+          font-weight: bold;
         }
-        
-        /* Optional: hover effect */
+
+        /* Optional: hover effect for Home button */
         .header--home-link:hover {
-            background-color: #0921b8; /* Darker blue on hover */
-        }
-
-        /* Make the home button blue */
-        .header--home-button {
-            background-color: #0f33ff; /* Blue background for home button */
-            color: #fff; /* White text color */
-            padding: 10px 20px; /* Padding */
-            border-radius: 5px; /* Rounded corners */
-            text-decoration: none; /* No underline */
-            font-weight: bold; /* Bold text */
-            display: inline-block; /* To make it behave like a button */
-        }
-
-        .header--home-button:hover {
-            background-color: #0921b8; /* Darker blue on hover */
+          background-color: #0921b8; /* Darker blue on hover */
         }
 
     </style>
@@ -105,9 +102,9 @@
                                 <h1>LEADERBOARD - <strong>2023</strong></h1>
                                 <table>
                                     <tr>
-                                      <th>Company</th>
-                                      <th>Contact</th>
-                                      <th>Country</th>
+                                      <th>Team</th>
+                                      <th>Lead</th>
+                                      <th>Region</th>
                                     </tr>
                                     <tr>
                                       <td>Alfreds Futterkiste</td>
