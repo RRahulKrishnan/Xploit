@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xploit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Reduced Neon Blue Glow Effect */
+        h1, h2 {
+            color: #ffffff; /* Neon color */
+            text-shadow: 0 0 5px #ffffff, 0 0 1px #ffffff;
+        }
+        strong {
+            color: #b741db; /* Neon blue color */
+        }
+        i {
+            color: #41db68; /* Neon blue color */
+        }
+        a {
+            color: #41cedb; /* Neon blue color */
+        }
+        /* Style for Home link box */
+        .header--home-link {
+            background-color: #0f33ff; /* Background color for the box */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold;
+        }
+        
+        /* Optional: hover effect */
+        .header--home-link:hover {
+            background-color: #0921b8; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <p>Xploit</p>
+        </a>
+        <p class="device-notification--message">Xploit has so much to offer that we must request you orient your device
+            to portrait or find a larger screen. You won't be disappointed.</p>
+    </div>
+    <div class="l-wrapper">
+        <header class="header">
+            <a class="header--logo" href="https://rrahulkrishnan.github.io/Xploit/index.html">
+                <img src="assets/img/logo.png" alt="Global">
+                <p>Xploit</p>
+            </a>
+            <!-- Home link styled as a button -->
+            <a class="header--home-link" href="index.html">Home</a>
+        </header>  
+        <div>
+            <br><br><br>
+            <!-- Meta-data Check Challenge Write-Up -->
+            <div class="about--banner">
+            <center>
+              <h2>Look Deeper<br>Meta-data Check Challenge</h2>
+            </center>
+            </div>
+            <h2>Problem Statement:</h2>
+            <p>In this challenge, you are tasked with analyzing the metadata of a suspicious PDF document to uncover a hidden flag. This exercise will test your ability to inspect files and detect information hidden within the metadata.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Scenario:</h2>
+            <img src="assets/img/sce.png" alt="Hint"><br>
+            <br>
+            <hr>
+            <br>
+            <h2>Objective:</h2>
+            <ul>
+                <li><strong>Download the PDF</strong>: Download the provided PDF file and use the Exif.tools service to dig into its metadata.</li>
+                <li><strong>Extract Metadata</strong>: Visit <a href="https://exif.tools/" target="_blank">Exif.tools</a> to inspect the metadata of the PDF document.</li>
+                <li><strong>Submit the Flag</strong>: Once you uncover the flag in the metadata, submit it to complete the challenge.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>Skills Required:</h2>
+            <ul>
+                <li><strong>Metadata Analysis</strong>: Use tools to extract and examine the metadata of the document.</li>
+                <li><strong>PDF Forensics</strong>: Investigate PDF files and uncover hidden or embedded information.</li>
+                <li><strong>Basic File Analysis</strong>: Familiarity with file inspection tools for metadata extraction.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>Hint:</h2>
+            <img src="assets/img/hin.png" alt="Hint"><br>
+            <p>When you open the <a href="https://exif.tools/" target="_blank">Exif.tools</a> page you will be greeted with this console where you can simply upload the file whoes meta data you would like to check.</p>
+            <img src="assets/img/exif.png" alt="Hint" width="900"><br>
+            <p>After you click <i>"Upload File"</i>  you will be redirected to a page which will show you the complete details and meta data of your file.</p>
+            <img src="assets/img/exifd.png" alt="Hint" width="900"><br>
+            <br>
+            <hr>
+            <br>
+            <h2>Conclusion:</h2>
+            <p>This challenge tests your skills in extracting and analyzing metadata from files, a critical ability when investigating digital documents. By looking deeper into the structure of files, you can uncover hidden secrets and data that aren't immediately visible.</p>
+            <br>
+            <br>
+            <center><h2><u>Good luck, and happy flag hunting!</u> 🎯</h2></center>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
