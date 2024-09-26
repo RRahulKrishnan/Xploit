@@ -55,6 +55,22 @@
         .header--home-link:hover {
             background-color: #0921b8; /* Darker blue on hover */
         }
+
+        /* Make the home button blue */
+        .header--home-button {
+            background-color: #0f33ff; /* Blue background for home button */
+            color: #fff; /* White text color */
+            padding: 10px 20px; /* Padding */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* No underline */
+            font-weight: bold; /* Bold text */
+            display: inline-block; /* To make it behave like a button */
+        }
+
+        .header--home-button:hover {
+            background-color: #0921b8; /* Darker blue on hover */
+        }
+
     </style>
 </head>
 
@@ -78,11 +94,10 @@
                             <img src="assets/img/logo.png" alt="Global">
                             <p>Xploit</p>
                         </a>
-                        <a class="header--logo" href="index.html">
-                          <p>Home</p>
-                          
-                      </a>
-                        
+                        <!-- Changed the "Home" button style -->
+                        <a class="header--home-button" href="index.html">
+                            Home
+                        </a>
                     </header>
                     
                     <ul class="l-main-content main-content">
