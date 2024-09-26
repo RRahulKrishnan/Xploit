@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xploit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Reduced Neon Blue Glow Effect */
+        h1, h2 {
+            color: #ffffff; /* Neon color */
+            text-shadow: 0 0 5px #ffffff, 0 0 1px #ffffff;
+        }
+        strong {
+            color: #b741db; /* Neon blue color */
+        }
+        strong {
+            color: #b741db; /* Neon blue color */
+        }
+        i {
+            color: #41db68; /* Neon blue color */
+        }
+        a {
+            color: #41cedb; /* Neon blue color */
+        }
+        /* Style for Home link box */
+        .header--home-link {
+            background-color: #0f33ff; /* Background color for the box */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold;
+        }
+        
+        /* Optional: hover effect */
+        .header--home-link:hover {
+            background-color: #0921b8; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <p>Xploit</p>
+        </a>
+        <p class="device-notification--message">Xploit has so much to offer that we must request you orient your device
+            to portrait or find a larger screen. You won't be disappointed.</p>
+    </div>
+    <div class="l-wrapper">
+        <header class="header">
+            <a class="header--logo" href="https://rrahulkrishnan.github.io/Xploit/index.html">
+                <img src="assets/img/logo.png" alt="Global">
+                <p>Xploit</p>
+            </a>
+            <!-- Home link styled as a button -->
+            <a class="header--home-link" href="index.html">Home</a>
+        </header>  
+        <div>
+            <br><br><br>
+            <!-- Cryptography Challenge Write-Up -->
+            <div class="about--banner">
+            <center>
+              <h2>Secrets remain Secrets...<br>Cryptography Challenge<br>Decryption</h2>
+            </center>
+            </div>
+            <h2>Problem Statement:</h2>
+            <p>In this challenge, you are tasked with decrypting a given text file. The text file contains encrypted content that you need to decrypt twice using an online tool to discover the hidden flag.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Scenario:</h2>
+            <img src="assets/img/zin.png" alt="Global">
+            <br>
+            <hr>
+            <br>
+            <h2>Objective:</h2>
+            <ul>
+                <li><strong>Download the Text File</strong>: <i>Obtain the provided text file and copy its content.</i></li>
+                <li><strong>Use CyberChef for Decryption</strong>: Head over to <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a>, paste the copied content, and decrypt the text twice using the appropriate decryption methods.</li>
+                <li><strong>Submit the Flag</strong>: After decrypting the message, extract the flag and submit it to complete the challenge.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>Skills Required:</h2>
+            <ul>
+                <li><strong>Cryptography</strong>: Familiarity with basic cryptographic methods and decryption tools.</li>
+                <li><strong>CyberChef</strong>: Ability to use CyberChef for text manipulation and decryption.</li>
+                <li><strong>File Analysis</strong>: Experience in working with encrypted files and uncovering hidden messages.</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h2>Hint:</h2>
+            <img src="assets/img/bint.png" alt="Global">
+            <p>On accessing <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> you will be greeted with this console, thhe console is divided into 4 parts namely:
+                <ol>
+                    <li>Operations</li>
+                    <li>Recipe</li>
+                    <li>Input</li>
+                    <li>Output</li>
+                </ol>
+            </p>
+            <img src="assets/img/console.png" alt="Global" width="900"><br>
+            <p>Here the <i>Operations</i>  tab has a variety of both encryptions and decryption algorithms that can be used to encode or decode the data, you can use this by simply dragiing and dropping the required algorithm into the <i>Recipe</i> section.</p>
+            <img src="assets/img/opt.png" alt="Global"><br>
+            <p>Once you have added the algorithms in the <i>Recipe</i> section you can now enter the <strong>"password"</strong> in the <i>Input</i> section and click on <strong>"Bake"</strong>.</p>
+            <img src="assets/img/reci.png" alt="Global"><br>
+            <br>
+            <hr>
+            <br>
+            <h2>Conclusion:</h2>
+            <p>This challenge focuses on basic cryptographic techniques, challenging you to decrypt a hidden message from a text file. Cryptography is a vital skill in cybersecurity, and this exercise will test your ability to use tools like CyberChef to solve encryption puzzles.</p>
+            <br>
+            <br>
+            <center><h2><u>Good luck, and happy decrypting!</u> 🎯</h2></center>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
