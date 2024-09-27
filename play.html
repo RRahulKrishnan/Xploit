@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xploit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Plain text for countdown labels */
+        .countdown span {
+            color: #ffffff; /* White color */
+            font-weight: bold; /* Bold labels */
+            text-shadow: none; /* No neon effect on labels */
+        }
+
+        /* Neon effect for numbers */
+        .countdown .number {
+            color: #ffffff; /* White text */
+            text-shadow: 0 0 10px #0f33ff, /* Neon glow */
+                         0 0 20px #0f33ff, 
+                         0 0 30px #0f33ff, 
+                         0 0 40px #0f33ff,
+                         0 0 50px #0f33ff, 
+                         0 0 60px #0f33ff, 
+                         0 0 70px #0f33ff;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-position: 68pc;
+            background-size: 160mm;
+        }
+
+        /* Style for Home button */
+        .header--home-button {
+            background-color: #0f33ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        /* Hover effect for Home button */
+        .header--home-button:hover {
+            background-color: #0921b8;
+        }
+
+        /* Countdown general styles */
+        .countdown {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            font-size: 80px; /* Large font size */
+            margin-top: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <p>Xploit</p>
+        </a>
+        <p class="device-notification--message">Xploit has so much to offer that we must request you orient your device
+            to portrait or find a larger screen. You won't be disappointed.</p>
+    </div>
+
+    <div class="perspective effect-rotate-left">
+        <div class="container">
+            <div id="viewport" class="l-viewport">
+                <div class="l-wrapper">
+                    <header class="header">
+                        <a class="header--logo" href="https://rrahulkrishnan.github.io/Xploit/index.html">
+                            <img src="assets/img/logo.png" alt="Global">
+                            <p>Xploit</p>
+                        </a>
+                        <!-- "Home" button with blue background -->
+                        <a class="header--home-button" href="index.html">
+                            Home
+                        </a>
+                    </header>
+
+                    <ul class="l-main-content main-content">
+                        <div class="intro">
+                        <center>
+                            <img src="assets/img/seesaw.png" alt="Global" width="100">
+                            <h1>Countdown to <strong style="color: #ffffff; text-shadow: 0 0 10px #0921b8, 0 0 20px #0921b8, 0 0 30px #0921b8, 0 0 40px #0921b8;">Playground Access</strong></h1>
+                        </center>
+                            <div id="countdown" class="countdown"></div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        // Set the target date to 1st January 2025
+        const targetDate = new Date("Jan 1, 2025 00:00:00").getTime();
+
+        // Update the countdown every second
+        const countdownInterval = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Calculate the time remaining
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the countdown div
+            document.getElementById("countdown").innerHTML = 
+                `<span><span class="number">${days}</span> Days</span> 
+                <span><span class="number">${hours}</span> Hours</span> 
+                <span><span class="number">${minutes}</span> Minutes</span> 
+                <span><span class="number">${seconds}</span> Seconds</span>`;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "HAPPY NEW YEAR!";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
