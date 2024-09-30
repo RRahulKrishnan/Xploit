@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xploit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Styles for the badge section */
+        .badge-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .badge {
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .badge img {
+            width: 200px; /* Increased size */
+            height: 200px; /* Increased size */
+            border-radius: 50%; /* Make images circular */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.3s;
+        }
+
+        /* Add highlight effect on hover */
+        .badge:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background highlight */
+        }
+
+        .badge:hover img {
+            box-shadow: 0 0 20px #0f33ff; /* Highlight image on hover */
+        }
+
+        .badge-level {
+            color: white;
+            font-size: 22px; /* Slightly increased font size */
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .badge-description {
+            color: #cccccc;
+            font-size: 18px; /* Slightly increased font size */
+            margin-top: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out; /* Fade in/out effect */
+        }
+
+        /* Show description and highlight badge on hover */
+        .badge:hover .badge-description {
+            opacity: 1;
+        }
+
+        /* Countdown general styles */
+        .countdown {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            font-size: 80px;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        /* Plain text for countdown labels */
+        .countdown span {
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: none;
+        }
+
+        /* Neon effect for numbers */
+        .countdown .number {
+            color: #ffffff;
+            text-shadow: 0 0 10px #0f33ff, 0 0 20px #0f33ff, 0 0 30px #0f33ff, 0 0 40px #0f33ff, 0 0 50px #0f33ff, 0 0 60px #0f33ff, 0 0 70px #0f33ff;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-position: 68pc;
+            background-size: 160mm;
+        }
+
+        /* Style for Home button */
+        .header--home-button {
+            background-color: #0f33ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        /* Hover effect for Home button */
+        .header--home-button:hover {
+            background-color: #0921b8;
+        }
+
+        /* Neon effect for heading */
+        h1.neon-heading {
+            text-align: center;
+            color: white;
+            font-size: 60px; /* Adjust size based on your design */
+            font-weight: bold;
+            text-shadow: 
+                         0 0 40px #ffffff, 
+                         0 0 50px #ffffff;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <p>Xploit</p>
+        </a>
+        <p class="device-notification--message">Xploit has so much to offer that we must request you orient your device
+            to portrait or find a larger screen. You won't be disappointed.</p>
+    </div>
+
+    <div class="perspective effect-rotate-left">
+        <div class="container">
+            <div id="viewport" class="l-viewport">
+                <div class="l-wrapper">
+                    <header class="header">
+                        <a class="header--logo" href="https://rrahulkrishnan.github.io/Xploit/index.html">
+                            <img src="assets/img/logo.png" alt="Global">
+                            <p>Xploit</p>
+                        </a>
+                        <a class="header--home-button" href="index.html">Home</a>
+                    </header>
+                    <br>
+                    <!-- Main Content Starts Here -->
+                    <div class="main-content">
+                        <h1 class="neon-heading">Badge Levels</h1>
+                        
+                        <!-- Badge Section -->
+                        <section class="badge-section">
+                            <div class="badge" onmouseover="showBadgeDescription('bronze')" onmouseout="hideBadgeDescription()">
+                                <img src="assets/img/1-modified.png" alt="Bronze Badge">
+                                <p class="badge-level">Bronze</p>
+                                <p class="badge-description" id="bronze-description"></p>
+                            </div>
+
+                            <div class="badge" onmouseover="showBadgeDescription('silver')" onmouseout="hideBadgeDescription()">
+                                <img src="assets/img/2-modified.png" alt="Silver Badge">
+                                <p class="badge-level">Silver</p>
+                                <p class="badge-description" id="silver-description"></p>
+                            </div>
+
+                            <div class="badge" onmouseover="showBadgeDescription('gold')" onmouseout="hideBadgeDescription()">
+                                <img src="assets/img/3-modified.png" alt="Gold Badge">
+                                <p class="badge-level">Gold</p>
+                                <p class="badge-description" id="gold-description"></p>
+                            </div>
+                        </section>
+
+                        <!-- Additional Script to Handle Dynamic Description -->
+                        <script>
+                            // Function to show badge description
+                            function showBadgeDescription(badgeLevel) {
+                                let description;
+                                switch (badgeLevel) {
+                                    case 'bronze':
+                                        description = "The Bronze badge represents your first steps into the world of cybersecurity. This badge shows you've got the fundamentals down!";
+                                        document.getElementById('bronze-description').innerText = description;
+                                        break;
+                                    case 'silver':
+                                        description = "The Silver badge demonstrates a deeper understanding of security concepts and your ability to apply them in complex scenarios.";
+                                        document.getElementById('silver-description').innerText = description;
+                                        break;
+                                    case 'gold':
+                                        description = "The Gold badge signifies mastery. You’ve shown excellence in cybersecurity challenges, proving yourself as an elite competitor.";
+                                        document.getElementById('gold-description').innerText = description;
+                                        break;
+                                }
+                            }
+
+                            // Function to hide badge description
+                            function hideBadgeDescription() {
+                                document.getElementById('bronze-description').innerText = "";
+                                document.getElementById('silver-description').innerText = "";
+                                document.getElementById('gold-description').innerText = "";
+                            }
+                        </script>
+
+                    </div>
+                    <!-- Main Content Ends Here -->
+
+</body>
+
+</html>
